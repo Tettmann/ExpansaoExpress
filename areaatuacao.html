@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área de Atuação | Expansão Express</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/rotas.css">
+
+  <!-- Ícones (Font Awesome via CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/logo-branco.png">
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <div class="logo">
+      <img src="img/logo-branco.png" alt="Expansão Express Logo">
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <nav id="navbar">
+      <a href="index.html"><i class="fas fa-motorcycle"></i> Início</a>
+      <a href="sobrenos.html"><i class="fas fa-calendar-check"></i> Sobre Nós</a>
+      <a href="areaatuacao.html" class="highlight"><i class="fas fa-map-marker-alt"></i> Área de Atuação</a>
+
+      <div class="dropdown">
+        <button id="menuDropdownBtn"><i class="fas fa-comments"></i> Fale Conosco</button>
+        <div id="menuDropdownOptions" class="dropdown-options">
+          <a href="documento.html"><i class="fas fa-phone"></i> Contato</a>
+          <a href="documento2.html"><i class="fas fa-briefcase"></i> Trabalhe Conosco</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Botão principal do WhatsApp -->
+  <div class="whatsapp-button" id="mainBtn">
+    <img src="img/whatsapp.png" alt="WhatsApp">
+  </div>
+
+  <div class="whatsapp-options" id="options">
+    <a href="https://wa.me/5511970959969?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Expans%C3%A3o!" target="_blank" rel="noopener">Quero ser Cliente</a>
+    <a href="https://wa.me/5511947551891?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20as%20vagas%20disponiveis!" target="_blank" rel="noopener">Veja nossas Vagas</a>
+  </div>
+
+  <main>
+    <section id="regioes" class="regioes-section">
+      <h2>Atuamos em Todo o Território Nacional</h2>
+      <p>Escolha uma região e um estado para ver no mapa.</p>
+
+      <div class="botoes-regioes">
+        <button class="btn-regiao" data-regiao="centro-oeste">Centro-Oeste</button>
+        <button class="btn-regiao" data-regiao="nordeste">Nordeste</button>
+        <button class="btn-regiao" data-regiao="norte">Norte</button>
+        <button class="btn-regiao" data-regiao="sudeste">Sudeste</button>
+        <button class="btn-regiao" data-regiao="sul">Sul</button>
+      </div>
+
+      <div class="botoes-estados" id="botoes-estados"></div>
+      <div class="mapa-container" id="mapa-container"></div>
+
+      <div class="mapa-wrapper">
+        <div class="lateral-grande-sp" id="lateral-grande-sp"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="top-footer">
+      <p>EXPANSÃO <span>EXPRESS</span></p>
+      <div class="btn-social">
+        <a href="https://www.instagram.com/expansao.express?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/share/198bCxMeqi/" target="_blank" rel="noopener">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+      </div>
+    </div>
+    <div class="footer"></div>
+    <div class="bottom-footer">
+      <p>Expansão Express 2025 © Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/rotas.js"></script>
+
+</body>
+</html>

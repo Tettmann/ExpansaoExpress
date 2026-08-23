@@ -1,0 +1,219 @@
+/* ===========================================
+   FORMULARIO.CSS — compartilhado pelas duas páginas de formulário
+   (documento.html = Contato, documento2.html = Trabalhe Conosco)
+   Carregar DEPOIS de base.css
+   =========================================== */
+
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  padding-top: 100px;
+  box-sizing: border-box;
+}
+
+.form-txt {
+  color: #555;
+}
+
+#file-name {
+  color: #000;
+}
+
+form {
+  background: #fff;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 700px;
+  box-sizing: border-box;
+  height: auto;
+}
+
+form h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form input[type="file"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+form label {
+  font-size: 0.9rem;
+  color: #555;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+form input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+form button {
+  background-color: #ff6a00;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #e55e00;
+}
+
+/* Upload customizado */
+.file-wrapper {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+.custom-file-btn {
+  background-color: #ff6a00;
+  color: #ffffff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+  box-sizing: border-box;
+}
+
+.custom-file-btn:hover {
+  background-color: #e55e00;
+}
+
+/* Input de arquivo real fica oculto (mas acessível) por trás do botão customizado */
+#curriculo {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+#file-name {
+  margin-top: 10px;
+  color: #000;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+/* Campos lado a lado (modelo e ano do veículo) */
+.form-flex {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-flex input {
+  flex: 1;
+  min-width: 150px;
+}
+
+select[name="assunto"],
+select[name="veiculo"] {
+  background-color: white;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='10'%20height='6'%3E%3Cpath%20fill='%23333'%20d='M0%200l5%206%205-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+select[name="assunto"]:hover,
+select[name="veiculo"]:hover {
+  border-color: #888;
+}
+
+select[name="assunto"]:focus,
+select[name="veiculo"]:focus {
+  border-color: #FFA500;
+  box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.3);
+}
+
+.lgpd-texto {
+  display: block;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: 1.5;
+  max-width: 800px;
+  margin: 20px auto;
+  color: #333;
+  word-wrap: break-word;
+}
+
+/* ===========================================
+   RESPONSIVO — FORMULÁRIOS
+   =========================================== */
+@media (max-width: 768px) {
+  form {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  form h2 {
+    font-size: 1.25rem;
+  }
+
+  .custom-file-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  #file-name {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .contato-modern {
+    padding: 60px 20px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .container {
+    margin-top: 10%;
+  }
+}

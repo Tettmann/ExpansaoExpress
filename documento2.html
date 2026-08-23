@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabalhe Conosco | Expansão Express</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/formulario.css">
+
+  <!-- Ícones (Font Awesome via CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/logo-branco.png">
+</head>
+
+<body>
+
+  <!-- Botão principal do WhatsApp -->
+  <div class="whatsapp-button" id="mainBtn">
+    <img src="img/whatsapp.png" alt="WhatsApp">
+  </div>
+
+  <div class="whatsapp-options" id="options">
+    <a href="https://wa.me/5511970959969?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Expans%C3%A3o!" target="_blank" rel="noopener">Quero ser Cliente</a>
+    <a href="https://wa.me/5511947551891?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20as%20vagas%20disponiveis!" target="_blank" rel="noopener">Veja nossas Vagas</a>
+  </div>
+
+  <!-- Cabeçalho -->
+  <header>
+    <div class="logo">
+      <img src="img/logo-branco.png" alt="Expansão Express Logo">
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <nav id="navbar">
+      <a href="index.html"><i class="fas fa-motorcycle"></i> Início</a>
+      <a href="sobrenos.html"><i class="fas fa-calendar-check"></i> Sobre Nós</a>
+      <a href="areaatuacao.html" class="highlight"><i class="fas fa-map-marker-alt"></i> Área de Atuação</a>
+
+      <div class="dropdown">
+        <button id="menuDropdownBtn"><i class="fas fa-comments"></i> Fale Conosco</button>
+        <div id="menuDropdownOptions" class="dropdown-options">
+          <a href="documento.html"><i class="fas fa-phone"></i> Contato</a>
+          <a href="documento2.html"><i class="fas fa-briefcase"></i> Trabalhe Conosco</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <form action="https://expansaoexpress.com.br/FORMULARIO1/enviar.php" method="POST" enctype="multipart/form-data" id="form-curriculo">
+      <div class="form-txt">
+        <h2>Faça parte da nossa equipe!</h2>
+        <p>A <strong>Expansão</strong> está sempre em busca de profissionais para participar do nosso time.</p><br>
+        <p>Preencha o formulário abaixo e anexe seu currículo. Assim que surgir uma oportunidade entraremos em contato:</p><br>
+      </div>
+
+      <input type="text" name="nome" placeholder="Nome" required>
+      <input type="text" name="telefone" placeholder="Telefone" required>
+      <input type="email" name="email" placeholder="E-mail" required>
+      <input type="text" name="cep" placeholder="CEP" required>
+
+      <select name="veiculo" required>
+        <option value="" disabled selected>Selecione o tipo de veículo</option>
+        <option value="Passeio">Passeio</option>
+        <option value="Utilitário">Utilitário</option>
+        <option value="Moto">Moto</option>
+      </select>
+
+      <div class="form-flex">
+        <input type="text" name="modelo_veiculo" placeholder="Modelo do veículo" required>
+        <input type="number" name="ano_veiculo" placeholder="Ano do veículo" required min="1900" max="2099">
+      </div>
+
+      <textarea name="mensagem" placeholder="Mensagem" required></textarea>
+
+      <div class="file-wrapper">
+        <label for="curriculo" class="custom-file-btn">Selecionar currículo</label>
+        <input type="file" id="curriculo" name="curriculo" accept=".doc,.pdf,.png" required>
+      </div>
+      <p id="file-name">Formatos aceitos: .doc, .pdf ou .png</p><br>
+
+      <label class="lgpd-texto">
+        <input type="checkbox" name="lgpd" required>
+        Declaro, para todos os fins, que estou ciente de que a Empresa poderá utilizar os dados fornecidos estritamente para fins comerciais, dentro dos limites legais estipulados pela Lei Geral de Proteção de Dados (Lei nº 13.709/2018). Estou igualmente ciente de que os dados compartilhados poderão ser armazenados pela Empresa para eventuais contatos comerciais. Para solicitar alteração, correção ou exclusão dos dados apresentados, deverá ser feito contato pelo e-mail: recursoshumanos@contactaspecialist.com.br.
+      </label>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <footer>
+    <div class="top-footer">
+      <p>EXPANSÃO <span>EXPRESS</span></p>
+      <div class="btn-social">
+        <a href="https://www.instagram.com/expansao.express?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/share/198bCxMeqi/" target="_blank" rel="noopener">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+      </div>
+    </div>
+    <div class="footer"></div>
+    <div class="bottom-footer">
+      <p>Expansão Express 2025 © Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+
+</body>
+</html>

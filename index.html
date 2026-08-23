@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expansão Express</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/home.css">
+
+  <!-- Ícones (Font Awesome via CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/logo-branco.png">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="img/logo-branco.png" alt="Expansão Express Logo">
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <nav id="navbar">
+      <a href="index.html"><i class="fas fa-motorcycle"></i> Início</a>
+      <a href="sobrenos.html"><i class="fas fa-calendar-check"></i> Sobre Nós</a>
+      <a href="areaatuacao.html" class="highlight"><i class="fas fa-map-marker-alt"></i> Área de Atuação</a>
+
+      <div class="dropdown">
+        <button id="menuDropdownBtn"><i class="fas fa-comments"></i> Fale Conosco</button>
+        <div id="menuDropdownOptions" class="dropdown-options">
+          <a href="documento.html"><i class="fas fa-phone"></i> Contato</a>
+          <a href="documento2.html"><i class="fas fa-briefcase"></i> Trabalhe Conosco</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- WhatsApp Button -->
+  <div class="whatsapp-button" id="mainBtn">
+    <img src="img/whatsapp.png" alt="WhatsApp">
+  </div>
+
+  <div class="whatsapp-options" id="options">
+    <a href="https://wa.me/5511970959969?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Expans%C3%A3o!" target="_blank" rel="noopener">Quero ser Cliente</a>
+    <a href="https://wa.me/5511947551891?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20as%20vagas%20disponiveis!" target="_blank" rel="noopener">Veja nossas Vagas</a>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Banner -->
+    <section class="hero-banner" id="Empresa">
+      <div class="hero-content">
+        <h1 class="hero-title">Expansão Express: Qualidade e Confiança<br> na velocidade que você precisa</h1>
+        <p class="hero-subtitle" style="text-align: left;">
+          Sua logística rápida e eficiente começa agora!
+        </p>
+        <a href="#sobre" class="hero-button">Quero conhecer</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="secao-sobre" id="sobre">
+      <div class="interface-sobre">
+        <div class="texto-sobre-bloco">
+          <h2 class="titulo-secao">Confiança e Velocidade em Cada Entrega</h2>
+          <h3 class="txt-1">A gente cuida do trajeto pra você focar no que importa.</h3>
+          <p class="texto-sobre-longo">
+            Na Expansão Express, entendemos que a eficiência de qualquer operação depende da entrega ágil e segura de cada item. Com sede em Guarulhos – SP, somos especialistas em transporte dedicado, oferecendo soluções logísticas rápidas, seguras e personalizadas para empresas de diversos segmentos. Atendemos oficinas mecânicas, lojas de autopeças, concessionárias, centros automotivos, farmácias, distribuidoras e outros negócios que precisam de entregas expressas com alto nível de confiabilidade.
+            <br><br>
+            Desde 2022, nossa missão é garantir que cada cliente receba seus produtos com pontualidade, segurança e eficiência — porque sabemos que, no seu dia a dia, cada minuto faz diferença.
+            <br><br>
+            Nossa operação é sustentada por uma equipe de motoboys treinados e comprometidos, além de uma frota preparada para transportar desde pequenos itens até cargas de maior complexidade, sempre com responsabilidade e conformidade total.
+            <br><br>
+            Na Expansão Express, entregamos mais do que encomendas: entregamos confiança, agilidade e parceria estratégica para o crescimento do seu negócio.
+          </p>
+        </div>
+        <div class="imagem-sobre">
+          <img src="img/boy.png" alt="Motoboy Expansão Express">
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <div class="rua">
+      <div class="bg-animado"></div>
+      <div class="timeline-container">
+        <img id="moto" class="moto moto2000" src="img/001.png" alt="Moto">
+        <div class="timeline-line"></div>
+
+        <div class="year-marker" style="left: 10%;" data-index="0">
+          <div class="dot">⬤</div>
+          <div class="year-label">1885</div>
+          <button class="year-btn" data-index="0">Ver Detalhes</button>
+        </div>
+
+        <div class="year-marker" style="left: 20%;" data-index="1">
+          <div class="dot">⬤</div>
+          <div class="year-label">1910</div>
+          <button class="year-btn" data-index="1">Ver Detalhes</button>
+        </div>
+
+        <div class="year-marker" style="left: 30%;" data-index="2">
+          <div class="dot">⬤</div>
+          <div class="year-label">1935</div>
+          <button class="year-btn" data-index="2">Ver Detalhes</button>
+        </div>
+
+        <div class="year-marker" style="left: 40%;" data-index="3">
+          <div class="dot">⬤</div>
+          <div class="year-label">1955</div>
+          <button class="year-btn" data-index="3">Ver Detalhes</button>
+        </div>
+
+        <div class="year-marker" style="left: 50%;" data-index="4">
+          <div class="dot">⬤</div>
+          <div class="year-label">1975</div>
+          <button class="year-btn" data-index="4">Ver Detalhes</button>
+        </div>
+
+        <div class="year-marker" style="left: 60%;" data-index="5">
+          <div class="dot">⬤</div>
+          <div class="year-label">1985</div>
+          <button class="year-btn" data-index="5">Ver Detalhes</button>
+        </div>
+
+        <div class="year-marker" style="left: 70%;" data-index="6">
+          <div class="dot">⬤</div>
+          <div class="year-label">2001</div>
+          <button class="year-btn" data-index="6">Ver Detalhes</button>
+        </div>
+
+        <div class="year-marker" style="left: 80%;" data-index="7">
+          <div class="dot">⬤</div>
+          <div class="year-label">2012</div>
+          <button class="year-btn" data-index="7">Ver Detalhes</button>
+        </div>
+
+        <div class="year-marker" style="left: 90%;" data-index="8">
+          <div class="dot">⬤</div>
+          <div class="year-label">2020</div>
+          <button class="year-btn" data-index="8">Ver Detalhes</button>
+        </div>
+
+        <div class="year-marker" style="left: 100%;" data-index="9">
+          <div class="dot">⬤</div>
+          <div class="year-label">2022</div>
+          <button class="year-btn" data-index="9">Ver Detalhes</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services Section -->
+    <section class="avaliacoes" id="servico">
+      <div class="interface-ava">
+        <h2>O QUE <span>FAZEMOS</span></h2>
+        <p class="ava">Sendo referência no ramo de motofrete, a Expansão Express tem como carro-chefe a entrega ágil e segura de peças automotivas. Atendemos autopeças, distribuidoras e empresas do setor automotivo, sempre com foco em eficiência e pontualidade. Além disso, também atuamos com excelência no atendimento a farmácias e outros segmentos que exigem logística rápida e confiável. Nosso diferencial está na busca constante por comprometimento, estabilidade e alta performance, que se refletem diretamente na qualidade do serviço e na satisfação dos nossos clientes.</p>
+
+        <div class="cards-avaliacoes">
+          <div class="card">
+            <img src="img/entrega-expressa.jpg" alt="Entrega expressa">
+            <div class="overlay"></div>
+            <div class="txt-card">
+              <h4><span>Entrega Expressa</span> de Peças</h4>
+              <p>Para garantir eficiência em situações de urgência, a Expansão Express disponibiliza um serviço exclusivo de entrega expressa de peças automotivas.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/coleta.jpg" alt="Coleta e entrega">
+            <div class="overlay"></div>
+            <div class="txt-card">
+              <h4><span>Coleta e Entrega</span> Programada</h4>
+              <p>Oferecemos um serviço de coleta e entrega programada, com foco em eficiência, pontualidade e praticidade.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/frente.png" alt="Logística personalizada">
+            <div class="overlay"></div>
+            <div class="txt-card">
+              <h4><span>Logística</span> para Clientes</h4>
+              <p>Nossas operações são planejadas com rotas personalizadas, alinhadas às necessidades de cada cliente, e contam com um rigoroso controle de entregas, garantindo eficiência, agilidade e total confiabilidade em toda a cadeia logística.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/c.jpg" alt="Entrega reversa">
+            <div class="overlay"></div>
+            <div class="txt-card">
+              <h4><span>Entrega Reversa</span> de Itens</h4>
+              <p style="text-align: left;">Realizamos a devolução de peças com defeito ou para troca, sempre com total cuidado e documentação adequada, garantindo transparência e segurança no processo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="numeros" class="numeros-section">
+      <h2>Nossos Números</h2>
+      <div class="numeros-container">
+        <div class="numero-box">
+          <i class="fas fa-stopwatch"></i>
+          <span class="numero tempo-entrega" data-target="40">40min</span>
+          <p>Tempo Médio para Entregas</p>
+        </div>
+        <div class="numero-box">
+          <i class="fas fa-shipping-fast"></i>
+          <span class="numero" data-target="2.380">1.692</span>
+          <p>Total de Entregas por Dia</p>
+        </div>
+        <div class="numero-box">
+          <i class="fas fa-box-open"></i>
+          <span class="numero" data-target="50.000">35.250</span>
+          <p>Total de Entregas por mês</p>
+        </div>
+        <div class="numero-box">
+          <i class="fas fa-chart-line"></i>
+          <span class="numero" data-target="600.000">423.000</span>
+          <p>Total de Entregas por Ano</p>
+        </div>
+      </div>
+
+      <p style="font-size: 20px; margin-top: 50px; color: aliceblue; font-weight: bold;">Contamos com mais de <span style="color: darkorange; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);">1.000</span> Colaboradores</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="contato-modern">
+      <div class="contato-container">
+        <h2>Entre em Contato</h2>
+        <p>Estamos prontos para te atender. Escolha a melhor forma de falar com a gente:</p>
+
+        <div class="contato-cards">
+          <div class="card-contato">
+            <i class="fas fa-envelope icone"></i>
+            <h3>E-mail</h3>
+            <p>Envie-nos um e-mail diretamente.</p>
+            <a href="mailto:expansaoexpress@expansaoexpress.com.br" class="btn-contato">Enviar Email</a>
+          </div>
+
+          <div class="card-contato">
+            <i class="fas fa-briefcase icone"></i>
+            <h3>Trabalhe Conosco</h3>
+            <p>Quer fazer parte do nosso time?</p>
+            <a href="documento2.html" class="btn-contato">Enviar Currículo</a>
+          </div>
+
+          <div class="card-contato">
+            <i class="fas fa-comment-dots icone"></i>
+            <h3>Dúvidas</h3>
+            <p>Envie-nos suas duvidas aqui.</p>
+            <a href="documento.html" class="btn-contato">Falar Agora</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="top-footer">
+      <p>EXPANSÃO <span>EXPRESS</span></p>
+      <div class="btn-social">
+        <a href="https://www.instagram.com/expansao.express?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/share/198bCxMeqi/" target="_blank" rel="noopener">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+      </div>
+    </div>
+    <div class="footer"></div>
+    <div class="bottom-footer">
+      <p>Expansão Express 2025 © Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="yearModal" class="year-modal hidden">
+    <div class="year-modal-content">
+      <span id="closeModal">×</span>
+      <img id="modalImage" src="img/001.png" alt="Moto">
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+
+</body>
+</html>

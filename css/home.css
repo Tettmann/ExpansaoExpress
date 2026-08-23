@@ -1,0 +1,719 @@
+/* ===========================================
+   HOME.CSS — específico da página inicial (index.html)
+   Carregar DEPOIS de base.css
+   =========================================== */
+
+/* ===========================================
+   HERO BANNER
+   =========================================== */
+.hero-banner {
+  display: flex;
+  padding: 80px 5%;
+  color: #fff;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: url('../img/moto.png') 60% 20% / cover no-repeat;
+}
+
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+  z-index: 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 500px;
+  min-height: 500px;
+  max-width: 800px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 2.3rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.hero-content img {
+  max-width: 100%;
+  height: auto;
+  width: 80vh;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 14px 10px;
+  background: linear-gradient(135deg, #c57d19, #ff6a00);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 5px 20px rgba(255, 106, 0, 0.5);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  animation: slideUp 2s ease forwards;
+  opacity: 0;
+  width: 200px;
+  text-align: center;
+}
+
+.hero-button:hover {
+  background: linear-gradient(135deg, #ff9500, #ff6a00);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 106, 0, 0.6);
+}
+
+/* ===========================================
+   SEÇÃO SOBRE
+   =========================================== */
+section.secao-sobre {
+  width: 100%;
+  max-width: 100vw;
+  padding: 120px 20px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: #201b1b;
+  margin-top: -1px;
+}
+
+.interface-sobre {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.titulo-secao {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff6a00;
+}
+
+.txt-1 {
+  color: #ff9500;
+}
+
+.texto-sobre-bloco {
+  flex: 1 1 500px;
+  text-align: left;
+  padding-left: 20px;
+  border-left: 5px solid #ff6a00;
+  width: 100%;
+  height: 100%;
+}
+
+.texto-sobre-longo {
+  font-size: 1.1rem;
+  color: #ffffff;
+  line-height: 1.8;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.imagem-sobre {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  padding-right: 200px;
+}
+
+.imagem-sobre img {
+  width: 100%;
+  max-height: 70vh;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 106, 0, 0.2);
+  display: block;
+}
+
+/* ===========================================
+   LINHA DO TEMPO
+   =========================================== */
+div.rua {
+  width: 100%;
+  max-width: 100vw;
+  padding: 0 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #ff6600be, #111111, #c95305, #222222);
+  background-size: 400% 400%;
+  animation: moverFundo 25s ease infinite;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-container {
+  position: relative;
+  width: 100%;
+  height: 340px;
+  max-width: 100vw;
+  padding-right: 100px;
+  overflow: visible;
+  z-index: 2;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 45.1%;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: #000000;
+  border-radius: 3px;
+}
+
+.year-marker {
+  position: absolute;
+  top: 37%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 140px;
+}
+
+.dot {
+  font-size: 20px;
+  color: #ff6600;
+  margin-top: 13px;
+}
+
+.year-label {
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.year-text {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #ffffff;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.year-text.visible {
+  opacity: 1;
+}
+
+/* Motos na timeline */
+.moto {
+  position: absolute;
+  left: 0;
+  object-fit: contain;
+  transition: transform 3s ease-in-out, top 0.5s ease;
+  z-index: 10;
+  pointer-events: auto;
+  width: 135px;
+  height: 100px;
+}
+
+.moto2000 { top: calc(45% - 92px); }
+.moto2005 { top: calc(45% - 92px); }
+.moto2010 { top: calc(45% - 98px); }
+.moto2015 { top: calc(45% - 95px); }
+.moto2020 { top: calc(45% - 99px); }
+.moto2001 { top: calc(45% - 95px); }
+.moto2006 { top: calc(45% - 95px); }
+.moto2016 { top: calc(45% - 97px); }
+.moto2019 { top: calc(45% - 96px); }
+.moto2030 { top: calc(45% - 100px); }
+
+/* Botões da timeline */
+.year-btn {
+  margin-top: 5px;
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s, opacity 0.5s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.year-btn.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.year-btn.hidden {
+  display: none;
+}
+
+.year-btn:hover {
+  background-color: #e55500;
+}
+
+/* Modal da timeline */
+.year-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.year-modal.hidden {
+  display: none;
+}
+
+.year-modal-content {
+  background: rgb(61, 53, 53);
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 12px;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.year-modal-content img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+#closeModal {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 24px;
+  color: #ff6600;
+  cursor: pointer;
+}
+
+/* ===========================================
+   SEÇÃO "O QUE FAZEMOS"
+   =========================================== */
+section.avaliacoes {
+  width: 100%;
+  max-width: 100vw;
+  padding: 80px 20px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: #201b1b;
+  margin-top: -2px;
+}
+
+.interface-ava {
+  padding: 20px;
+}
+
+.avaliacoes h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.avaliacoes h2 span {
+  color: #ff6a00;
+}
+
+.avaliacoes .ava {
+  color: #fff;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.cards-avaliacoes {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  overflow: hidden;
+  background-color: #3a3a3a;
+  border-radius: 10px;
+  width: 100%;
+  height: 400px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+  margin-top: -10px;
+  border-radius: 10px;
+}
+
+.card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.596);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.card .txt-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  padding: 80px 20px;
+  text-align: justify;
+}
+
+.card .txt-card h4 {
+  color: #fff;
+}
+
+.card .txt-card h4 span {
+  color: #ff6a00;
+}
+
+.card .txt-card p {
+  margin-top: 10px;
+  color: #fff;
+}
+
+/* ===========================================
+   SEÇÃO NÚMEROS
+   =========================================== */
+section.numeros-section {
+  width: 100%;
+  max-width: 100vw;
+  padding: 100px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.808), rgba(248, 110, 18, 0.699));
+  text-align: center;
+}
+
+.numeros-section h2 {
+  font-size: 2.5rem;
+  color: #ff6a00;
+  margin-bottom: 40px;
+}
+
+.numeros-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.numero-box {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.numero-box:hover {
+  transform: translateY(-5px);
+}
+
+.numero {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #ff6a00;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.numero-box p {
+  font-size: 1.1rem;
+  color: #000;
+}
+
+.numero-box i {
+  font-size: 2.2rem;
+  color: #252222;
+  margin-bottom: 15px;
+  animation: bounce 2s infinite;
+}
+
+/* ===========================================
+   SEÇÃO CONTATO
+   =========================================== */
+.contato-modern {
+  background-color: #201b1b;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.contato-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contato-modern h2 {
+  font-size: 40px;
+  color: #ff6600;
+  margin-bottom: 10px;
+}
+
+.contato-modern p {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.contato-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card-contato {
+  background-color: #2e2626ef;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  flex: 1 1 250px;
+  max-width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-contato:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-contato .icone {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #ff6600;
+}
+
+.card-contato h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.card-contato p {
+  color: #a39f9f;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.btn-contato {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #ff6600;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-contato:hover {
+  background-color: #e55500;
+}
+
+/* ===========================================
+   ANIMAÇÕES DA HOME
+   =========================================== */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes moverFundo {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* ===========================================
+   RESPONSIVO DA HOME
+   =========================================== */
+@media (max-width: 1024px) {
+  .hero-banner {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 5%;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .hero-title {
+    text-align: start;
+  }
+
+  .interface-sobre {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .imagem-sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0;
+  }
+
+  .imagem-sobre img {
+    max-width: 300px;
+  }
+
+  .cards-avaliacoes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .numeros-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-banner {
+    min-height: 80vh;
+    padding: 15px;
+  }
+
+  .hero-content {
+    gap: 25px;
+  }
+
+  .hero-button {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+
+  .contato-modern {
+    padding: 60px 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .cards-avaliacoes {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .numeros-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  div.rua {
+    display: none;
+  }
+
+  .hero-content {
+    padding-right: 250px;
+  }
+
+  .hero-title {
+    font-size: 18px;
+  }
+
+  .titulo-secao {
+    font-size: 25px;
+  }
+
+  .texto-sobre-longo {
+    font-size: 14px;
+    text-align: start;
+  }
+
+  .txt-card p {
+    text-align: start;
+  }
+}
+
+@media (max-width: 600px) {
+  .numeros-section h2 {
+    font-size: 2rem;
+  }
+
+  .numero {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-banner {
+    min-height: 60vh;
+    padding: 10px;
+  }
+
+  .hero-content {
+    padding-right: 0;
+    gap: 20px;
+  }
+
+  .hero-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .logo {
+    margin-left: -20px;
+  }
+}
